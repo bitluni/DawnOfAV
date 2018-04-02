@@ -77,7 +77,7 @@ void setup()
   controllers.setController(0, GameControllers::NES, CONTROLLER_DATA_PIN); //first controller
 
   //Play first sound in loop (music)
-  music.play(audioSystem, 0, 2, 1, loop);
+  music.play(audioSystem, 0);
 
   for(int i = 0; i < 256; i++)
   {
@@ -131,7 +131,7 @@ void loop()
         graphics.dotFast(vx, vy, graphics.rgb(0, 0, 0));
       else
       {
-          int c = texture.get(0, 256 - x, (rot - y) & 511);
+          int c = texture.get(0, 256 - x, (-rot - y) & 511);
           int r = (light * (c & 15)) >> 4;
           int g = (light * ((c >> 4) & 15)) >> 4;
           int b = (light * ((c >> 8) & 15)) >> 4;
