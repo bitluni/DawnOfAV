@@ -1,10 +1,5 @@
 //code by bitluni give me a shout-out if you like it
 
-//music credits
-//"Also Sprach Zarathustra" Kevin MacLeod (incompetech.com)
-//Licensed under Creative Commons: By Attribution 3.0 License
-//http://creativecommons.org/licenses/by/3.0/
-
 #include <soc/rtc.h>
 #include "AudioSystem.h"
 #include "AudioOutput.h"
@@ -33,7 +28,7 @@ GameControllers controllers;
 
 ////////////////////////////
 //audio configuration
-const int SAMPLING_RATE = 16000;
+const int SAMPLING_RATE = 20000;
 const int BUFFER_SIZE = 4000;
 AudioSystem audioSystem(SAMPLING_RATE, BUFFER_SIZE);
 AudioOutput audioOutput;
